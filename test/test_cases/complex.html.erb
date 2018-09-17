@@ -1,0 +1,6 @@
+<section class="container is-fluid artwork-columns">
+  <h1 class="title"><%= t('.title') %></h1>
+  <div class="columns is-multiline is-desktop" data-controller="grid" data-target="grid.grid">
+    <%= render partial: "artworks/art_card", collection: @artworks, as: :artwork, locals: { columns: true } %>
+  </div>
+</section>

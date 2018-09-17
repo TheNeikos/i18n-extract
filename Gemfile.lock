@@ -29,6 +29,7 @@ GEM
       parser (>= 2.4)
       smart_properties
     builder (3.2.3)
+    byebug (10.0.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     erubi (1.7.1)
@@ -60,6 +61,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
+  byebug
   minitest (~> 5)
   rails_i18n_extract!
   rake (~> 10.0)
