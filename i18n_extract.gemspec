@@ -1,16 +1,16 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "rails_i18n_extract/version"
+require "i18n_extract/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "rails_i18n_extract"
-  spec.version       = RailsI18nExtract::VERSION
+  spec.name          = "i18n_extract"
+  spec.version       = I18nExtract::VERSION
   spec.authors       = ["Marcel Müller"]
   spec.email         = ["neikos@neikos.email"]
 
-  spec.summary       = "Extract hardcoded strings from your rails views."
-  spec.homepage      = "https://github.com/TheNeikos/rails_i18n_extract"
+  spec.summary       = "Extract hardcoded strings from your ERB views."
+  spec.homepage      = "https://github.com/TheNeikos/i18n_extract"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
