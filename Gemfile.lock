@@ -1,8 +1,9 @@
 PATH
   remote: .
   specs:
-    i18n_extract (0.1.0)
+    i18n_extract (0.1.1)
       better_html (~> 1.0)
+      colorize (~> 0.8)
       parser (~> 2.5)
 
 GEM
@@ -29,6 +30,7 @@ GEM
       parser (>= 2.4)
       smart_properties
     builder (3.2.3)
+    colorize (0.8.1)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     erubi (1.7.1)

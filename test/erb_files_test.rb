@@ -40,4 +40,10 @@ class ErbFilesTest < MiniTest::Test
     extractor = I18nExtract::Extractor.new(path)
     extractor.validate!
   end
+
+  def test_validate_spaces_file
+    path = file_path_for "spaces"
+    extractor = I18nExtract::Extractor.new(path)
+    extractor.validate!
+  end
 end

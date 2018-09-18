@@ -2,6 +2,7 @@ require "ast"
 require "better_html"
 require "better_html/parser"
 require "parser"
+require "i18n_extract/html_iterator"
 
 module I18nExtract
   class ExtractError < StandardError
@@ -9,6 +10,11 @@ module I18nExtract
     def initialize(node, *args)
       super *args
       @node = node
+    end
+
+    def message
+      msg = super
+      "#{msg}: #{node.location.to_s}"
     end
   end
 
@@ -25,9 +31,8 @@ module I18nExtract
     def extract
       children = @parser.ast
 
-      children.descendants(:text)
-        .reject { |node|
-        node.children.reject{|child| !child.is_a?(String) }.map(&:strip).join('').blank?
+      HTMLIterator.descendants(children).reject { |node|
+        node.children.reject{|child| !child.is_a?(String) }.map(&:strip).join('').empty?
       }.to_a
     end
 
