@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    i18n_extract (0.1.1)
+    i18n_extract (1.0.0)
       better_html (~> 1.0)
       colorize (~> 0.8)
       parser (~> 2.5)

@@ -4,7 +4,7 @@ namespace :'i18n-extract' do
   desc "Check views for hard-coded strings"
   task :check => :environment do
     root = Rails.root.join('app','views')
-    Dir.glob("#{root}/**/*.html.erb").each do |file|
+    Dir.glob("#{root}/**/*.html.erb").reject{|f| !/\A[^\.]*\.html\.erb\Z/.match?(File.basename(f))}.each do |file|
       extractor = I18nExtract::Extractor.new(file)
       extractor.extract.each do |r|
         puts r.location.to_s.colorize(:red)
